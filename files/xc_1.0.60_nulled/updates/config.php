@@ -1,13 +1,13 @@
 <?php
-	define('XC_SERVER', 'http://130.211.220.171:9090');
+	define('XC_SERVER', 'http://DOMAIN:PORT');
 
-	define('MYSQL_SERVER', 'localhost');
+	define('MYSQL_SERVER', 'MYHOST');
 
-	define('MYSQL_USERNAME', 'xcpanel');
+	define('MYSQL_USERNAME', 'MYUSERNAME');
 
-	define('MYSQL_PASSWORD', 'pencilstand');
+	define('MYSQL_PASSWORD', 'MYPASSWORD');
 
-	define('MYSQL_DATABASE', 'xtream_iptvpro');
+	define('MYSQL_DATABASE', 'MYDATABASE');
 
 	define('PHPSESSID_FILE', '/home/xtreamcodes/iptv_xtream_codes/crons/PHPSESSID');
 
