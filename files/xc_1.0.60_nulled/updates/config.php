@@ -1,6 +1,4 @@
 <?php
-	define('XC_SERVER', 'http://DOMAIN:PORT');
-
 	define('MYSQL_SERVER', 'MYHOST');
 
 	define('MYSQL_USERNAME', 'MYUSERNAME');
