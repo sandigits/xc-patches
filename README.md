@@ -13,3 +13,5 @@ rewrite ^/live/(.*)/(.*)/(.*)\.(.*)$ /streaming/check_ondemand.php?username=$1&p
 
 ~~rewrite ^/(.*)/(.*)/(.*).ch$ /streaming/clients_live.php?username=$1&password=$2&stream=$3&extension=ts break;~~
 rewrite ^/(.*)/(.*)/(.*).ch$ /streaming/check_ondemand.php?username=$1&password=$2&stream=$3&extension=ts break;
+
+Contact https://web.telegram.org/@sivainf ACTKEY
