@@ -15,7 +15,8 @@ if [ -d "$XC_DIR" ]; then
   read -p "MySQL Database [xtream_iptvpro]: " dbname
   dbname=${dbname:-xtream_iptvpro}
   if mysql -h "$dbhost" -u "$dbuser" -p"$dbpass"  -e "use $dbname"; then
-    echo "SUCCESS"
+    wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/updates.zip
+	unzip updates.zip -d /home/xtreamcodes/iptv_xtream_codes/wwwdir/updates1/
   fi
 else
   RED='\033[0;31m'
