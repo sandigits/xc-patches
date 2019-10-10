@@ -24,16 +24,14 @@ if [ -d "$XC_DIR" ]; then
     rm updates.zip
     touch "$XC_DIR"crons/PHPSESSID
     chown xtreamcodes:xtreamcodes "$XC_DIR"crons/PHPSESSID
-    touch "$XC_DIR"crons/ACTKEY
-    echo "a5b3f19d6bac5f3def4" > /home/xtreamcodes/iptv_xtream_codes/crons/ACTKEY
     sed -i "s/MYHOST/$dbhost/g" "$XC_DIR$WWW_DIR/updates/config.php"
     sed -i "s/MYUSERNAME/$dbuser/g" "$XC_DIR$WWW_DIR/updates/config.php"
     sed -i "s/MYPASSWORD/$dbpass/g" "$XC_DIR$WWW_DIR/updates/config.php"
     sed -i "s/MYDATABASE/$dbname/g" "$XC_DIR$WWW_DIR/updates/config.php"
     sed -i "s/XCPORT/$xcport/g" "$XC_DIR$WWW_DIR/updates/config.php"
-    wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/cron/monitor_session
-    wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/cron/monitor_stream
-    wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/cron/stream
+    wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/cron/monitor_session.sh
+    wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/cron/monitor_stream.sh
+    wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/cron/stream.sh
     mv monitor_session "$XC_DIR"crons/monitor_session
     chmod +x "$XC_DIR"crons/monitor_session
     mv monitor_stream "$XC_DIR"crons/monitor_stream
@@ -41,8 +39,8 @@ if [ -d "$XC_DIR" ]; then
     mv stream "$XC_DIR"crons/stream
     chmod +x "$XC_DIR"crons/stream
     crontab -l > mycron
-    echo "*/10 * * * * ${XC_DIR}crons/monitor_stream $dbhost $dbuser $dbpass $dbname $xcport" >> mycron
-    echo "*/7 * * * * ${XC_DIR}crons/monitor_session" >> mycron
+    echo "*/10 * * * * ${XC_DIR}crons/monitor_stream.sh $dbhost $dbuser $dbpass $dbname $xcport" >> mycron
+    echo "*/7 * * * * ${XC_DIR}crons/monitor_session.sh" >> mycron
     crontab mycron
     rm mycron
     service cron restart
