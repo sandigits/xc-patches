@@ -28,6 +28,9 @@ rewrite ^/(.*)/(.*)/(.*).ch$ /streaming/check_ondemand.php?username=$1&password=
 
 ![alt Enable On-Demand for Channels](https://raw.githubusercontent.com/sandigits/xc-patches/master/files/xc_1.0.60_nulled/screens/updates-streams.png)
 
-#### [6] Save your PHPSESSID value
+#### [6] Save your PHPSESSID value. (You should login into Xtream Codes via SSH tunnelling. Also use an account which is created only for on-demand purpose and never use that account for login via ipaddress/domain name)
 
-![alt Enable On-Demand for Channels](https://raw.githubusercontent.com/sandigits/xc-patches/master/files/xc_1.0.60_nulled/screens/updates-service.png)
+![alt Save your PHPSESSID value](https://raw.githubusercontent.com/sandigits/xc-patches/master/files/xc_1.0.60_nulled/screens/updates-service.png)
+
+
+![alt Copy PHPSESSID value](https://raw.githubusercontent.com/sandigits/xc-patches/master/files/xc_1.0.60_nulled/screens/localhost-php-session.png)
