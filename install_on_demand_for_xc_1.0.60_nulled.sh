@@ -32,12 +32,12 @@ if [ -d "$XC_DIR" ]; then
     wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/cron/monitor_session.sh
     wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/cron/monitor_stream.sh
     wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/cron/stream.sh
-    mv monitor_session "$XC_DIR"crons/monitor_session
-    chmod +x "$XC_DIR"crons/monitor_session
-    mv monitor_stream "$XC_DIR"crons/monitor_stream
-    chmod +x "$XC_DIR"crons/monitor_stream
-    mv stream "$XC_DIR"crons/stream
-    chmod +x "$XC_DIR"crons/stream
+    mv monitor_session.sh "$XC_DIR"crons/monitor_session.sh
+    chmod +x "$XC_DIR"crons/monitor_session.sh
+    mv monitor_stream.sh "$XC_DIR"crons/monitor_stream.sh
+    chmod +x "$XC_DIR"crons/monitor_stream.sh
+    mv stream.sh "$XC_DIR"crons/stream.sh
+    chmod +x "$XC_DIR"crons/stream.sh
     crontab -l > mycron
     echo "*/10 * * * * ${XC_DIR}crons/monitor_stream.sh $dbhost $dbuser $dbpass $dbname $xcport" >> mycron
     echo "*/7 * * * * ${XC_DIR}crons/monitor_session.sh" >> mycron
