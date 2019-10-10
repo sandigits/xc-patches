@@ -32,5 +32,5 @@ rewrite ^/(.*)/(.*)/(.*).ch$ /streaming/check_ondemand.php?username=$1&password=
 
 ![alt Save your PHPSESSID value](https://raw.githubusercontent.com/sandigits/xc-patches/master/files/xc_1.0.60_nulled/screens/updates-service.png)
 
-
+#### Copying PHPSESSID
 ![alt Copy PHPSESSID value](https://raw.githubusercontent.com/sandigits/xc-patches/master/files/xc_1.0.60_nulled/screens/localhost-php-session.png)
