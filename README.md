@@ -19,7 +19,3 @@ rewrite ^/(.*)/(.*)/(.*).ch$ /streaming/check_ondemand.php?username=$1&password=
 
 
 #### [3] Reboot XC Server
-
-~~~~ 
-Contact https://web.telegram.org/@sivainf for ACTKEY
-~~~~
