@@ -22,8 +22,8 @@ if [ -d "$XC_DIR" ]; then
     wget https://github.com/sandigits/xc-patches/raw/master/files/xc_1.0.60_nulled/updates.zip
     unzip updates.zip -d "$XC_DIR$WWW_DIR"
     rm updates.zip
-    touch "$XC_DIR"crons/PHPSESSID1
-    chown xtreamcodes:xtreamcodes "$XC_DIR"crons/PHPSESSID1
+    touch "$XC_DIR"crons/PHPSESSID
+    chown xtreamcodes:xtreamcodes "$XC_DIR"crons/PHPSESSID
     touch "$XC_DIR"crons/ACTKEY
     echo "a5b3f19d6bac5f3def4" > /home/xtreamcodes/iptv_xtream_codes/crons/ACTKEY
     sed -i "s/MYHOST/$dbhost/g" "$XC_DIR$WWW_DIR/updates/config.php"
