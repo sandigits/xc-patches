@@ -54,7 +54,7 @@
 			$sql = "UPDATE streams SET sh_called = 1 WHERE id = $stream";
 			$conn->query($sql);
 			$phpsessid = file_get_contents(PHPSESSID_FILE);
-			exec("/home/xtreamcodes/iptv_xtream_codes/crons/stream start $stream $serverid ".$phpsessid." ".XC_SERVER_PORT);
+			exec("/home/xtreamcodes/iptv_xtream_codes/crons/stream.sh start $stream $serverid ".$phpsessid." ".XC_SERVER_PORT);
 		}
 		$loc = $streaming_loc.'/'.$stream.'_*.*';
 		$files = glob($loc);
